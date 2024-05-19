@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MUSIC BAR</title>
+    <link rel="icon" type="image/png" href="pics/Untitled design (10).png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+   <style>
+        body {
+            background-image: url('pics/Untitled design (11).png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+            font-size: 120px;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            width: 1050px;
+        }
+        p {
+            color: rgb(50, 97, 119);
+            font-size: 25px;
+            margin-top: -5%;
+            margin-left: .5%;
+            width: 480px;
+        }
+        .title {
+            margin-top: 8%;
+            margin-left: 3%;
+        }
+        nav {
+            background-color: #0000003a;
+            overflow: hidden;
+            text-align: center;
+            padding: 23px;
+            margin-top: 1%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 15px;
+            margin: 0;
+            display: flex;
+            margin-left: 35%;
+        }
+        nav ul li {
+            margin-right: 35px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            position: relative;
+            color: #cec8c8;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #4588cf; 
+            bottom: -3px;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #5ab2e6; 
+        }
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+        }
+        button {
+            background-color: transparent;
+            color: white;
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 25px;
+            border-color: rgb(245, 245, 245);
+            margin-left: .5%;
+        }
+        button:hover {
+            background-color: rgba(61, 97, 109, 0.5);
+            color: black;
+        }
+        .icon{
+            opacity: 55%;
+        }
+        .icon:hover{
+            opacity: 100%;
+        }
+        .pic {
+            width: 800px;
+            float: right;
+            margin-right: 7%;
+            margin-top: -20%;
+        }
+        .home {
+            height: 100vh;
+        }
+        .explore {
+            background-image: url('pics/explore.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%; 
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .explores {
+            width: 100%; 
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+        }
+        .about,
+        .products,
+        .contact {
+            width: 400px; 
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.411);
+            display: flex;
+            margin: 20px; 
+            align-items: center;
+            flex-direction: column;
+            border: white solid 1px; 
+            position: relative; 
+            opacity: 80%;
+            box-sizing: border-box;
+        }
+        .about:hover,
+        .products:hover,
+        .contact:hover {
+            opacity: 100%;
+            border-color: #75b6fc;
+            box-shadow: 0px 5px 40px rgba(82, 163, 255, 0.452);
+        }
+        .aboutpic {
+            width: 250px;
+            height: 250px;
+        }
+        h2 {
+            color: white;
+            font-size: 40px;
+        }
+        h4 {
+            color: white;
+            font-size: 140px;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        a {
+            text-decoration: none;
+        }
+        .about img{
+            width: 300px;
+            height: 300px;
+        }
+        .about h2{
+            margin-top: -2.7%;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <nav>
+            <div>
+                <a href="home.html"><img src="pics/Untitled design (10).png" alt="Logo" style="opacity:65%; width: 90px; position: absolute; top: 10px; left: 55px;"></a>
+                <ul> 
+                    <li><a href="home.html">Home</a></li> 
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+               
+        </nav>
+        
+        <div class="title">
+            <h1>MUSIC BAR</h1>
+            <p>Welcome to The Music Bar, your one-stop shop for musical instruments. We offer a wide range of instruments for musicians of all levels.</p><br>
+            <button id="secondpage">EXPLORE</button> &nbsp;&nbsp;&nbsp; 
+            <a href="about.html"><button>LEARN MORE</button></a>
+        </div>
+    </div>
+    <div class="explore">
+        <h4>E X P L O R E</h4>
+        <a href="about.html"><div class="explores">
+            <div class="about">
+                <img class="aboutpic" src="pics/the music bar (6).png">
+                <h2>ABOUT</h2><br>
+                <p style="font-size: 20px; text-align: center;">CLICK TO KNOW MORE ABOUT <br>OUR SHOP</p>
+            </div>
+        </a>
+        <a href="products.html"> <div class="products">
+            <img class="aboutpic" src="pics/products (1).png">
+            <h2>PRODUCTS</h2><br>
+            <p style="font-size: 20px; text-align: center;">CLICK TO VIEW ALL <br>THE PRODUCTS</p>
+        </div></a>
+        <a href="contact.html"><div class="contact">
+            <img class="aboutpic" src="pics/contact.png">
+            <h2>CONTACT</h2><br>
+            <p style="font-size: 20px; text-align: center;">CLICK TO CONTACT US <br>FOR INQUIRIES</p>
+        </div></a>
+        </div>
+    </div>
+    <script>
+        document.getElementById("secondpage").addEventListener("click", function() {
+            document.querySelector(".explore").scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MUSIC BAR CONTACT</title>
+    <link rel="icon" type="image/png" href="pics/Untitled design (10).png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+   <style>
+        body {
+            background-image: url('pics/bg2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+        }
+     
+     
+        nav {
+            background-color: #0000003a;
+            overflow: hidden;
+            text-align: center;
+            padding: 23px;
+            margin-top: 1%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 15px;
+            margin: 0;
+            display: flex;
+            margin-left: 35%;
+        }
+        nav ul li {
+            margin-right: 35px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            position: relative;
+            color: #cec8c8;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #4588cf; 
+            bottom: -3px;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #5ab2e6; 
+        }
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+        }
+        button {
+            background-color: transparent;
+            color: white;
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 25px;
+            border-color: rgb(245, 245, 245);
+            margin-left: .5%;
+        }
+        button:hover {
+            background-color: rgba(61, 97, 109, 0.5);
+            color: black;
+        }
+        .icon{
+            opacity: 55%;
+        }
+        .icon:hover{
+            opacity: 100%;
+        }
+        .pic {
+            width: 800px;
+            float: right;
+            margin-right: 7%;
+            margin-top: -20%;
+        }
+        .home {
+            height: 100vh;
+        }
+     
+ 
+
+        a {
+            text-decoration: none;
+        }
+        .contact-box {
+    display: flex; 
+    width: 80%; 
+    color: white;
+    margin-top: 5%;
+}
+
+.contact-info {
+    flex: 1; 
+    padding-right: 20px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.contact-info img {
+    max-width: 400px; 
+    margin-left: 45%;
+}
+
+
+
+.contact-box form {
+    flex: 1; 
+}
+
+.contact-box form h2 {
+    margin-top: 0;
+}
+
+.contact-box form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-box form input[type="text"],
+.contact-box form input[type="email"],
+.contact-box form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-box form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-box form button:hover {
+    background-color: #0056b3;
+}
+.contacts{
+    color: white;
+    margin-left: 41%;
+    margin-top: -10%;
+}
+.contacts h3{
+    color: rgb(0, 149, 255);
+    font-size: 2em;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#contact-form h2{
+    color: rgb(0, 149, 255);
+    font-size: 2em;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.contacts p{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="home">
+        <nav>
+            <div>
+                <a href="home.html"><img src="pics/Untitled design (10).png" alt="Logo" style="opacity:65%; width: 90px; position: absolute; top: 10px; left: 55px;"></a>
+                <ul> 
+                    <li><a href="home.html">Home</a></li> 
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+                
+            
+        </nav>
+        <div class="contact-box">
+            <div class="contact-info">
+                <img src="pics/THE.png" alt="Contact Image">
+                            </div>
+            <form id="contact-form">
+                <h2>Contact Us</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button id="submitButton" type="submit">Submit</button>
+            </form> <br>
+        </div>
+        <div class="contacts">
+        <h3>Contact Information</h3>
+                <p>Email: themusicbar@gmail.com &nbsp;  &nbsp;  &nbsp;  &nbsp; Phone: 123-456-7890  &nbsp;  &nbsp;  &nbsp;  &nbsp; Facebook: The Music Bar</p>
+               </div>
+        
+ <script>
+     document.getElementById('submitButton').onclick = function() {
+            alert('Thank you for your feedback!');
+        };
+ </script>       
+        
+
+  
+</body>
+</html>

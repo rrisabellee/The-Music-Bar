@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MUSIC BAR PRODUCTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+    <link rel="icon" type="image/png" href="pics/Untitled design (10).png">
+</head>
+<body>
+    <div class="home">
+        <nav>
+            <div>
+                <a href="home.html"><img src="pics/Untitled design (10).png" alt="Logo" style="opacity:65%; width: 90px; position: absolute; top: 10px; left: 55px;"></a>
+                <ul> 
+                    <li><a href="home.html">Home</a></li> 
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <img id="carticon" onclick="toggleCart()" class="icon" src="pics/cart.png" alt="Cart" style="width: 47px; position: absolute; top: 10px; right: 40px;">        </nav>
+        <div id="cart" class="cart hidden">
+            <button id="hideCartBtn">X</button>
+            <h2>Shopping Cart</h2><hr>
+            <div id="cart-items">
+            </div>
+            <button class="checkout">CHECK OUT</button>
+        </div>
+        <div class="checkout-box hidden">
+            <button id="hidecheckouttBtn">X</button>
+            <h1>FILL UP TO PROCEED</h1>
+            <hr>
+            <form id="orderForm" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="contact">Contact Number:</label>
+                <input type="text" id="contact" name="contact" required>
+                <br>
+                <label for="payment-method">Select Payment Method:</label>
+<select id="payment-method" name="payment-method" onchange="setPaymentMethod(this.value)">
+    <option value="cash">Cash on Delivery</option>
+    <option value="gcash">GCash</option>
+</select>
+        
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="gallery">
+            <div class="productbox" data-description="This is the Music Bar high-quality acoustic guitar perfect for beginners and professionals alike.">
+                <div class="productclick"><div class="productbg"><img src="products/guitar1 (2).png"></div>
+                <h3>TMB Acoustic Guitar</h3>
+                <p>₱5,999</p></div> 
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Acoustic Guitar', 5999)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="This guitar, made from quality wood, delivers rich tones perfect for any performance or practice session.">
+                <div class="productclick"><div class="productbg"><img src="products/guitar2.png" alt="Product 2"></div>
+                <h3>TMB WoodVibe Guitar</h3>
+                <p>₱10,499</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB WoodVibe Guitar', 10499)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="With nylon strings and a traditional design, this guitar offers a classic sound ideal for playing classical pieces or fingerstyle music.">
+                <div class="productclick"><div class="productbg"><img src="products/guitar3.png" alt="Product 3"></div>
+                <h3>TMB Classical Guitar</h3>
+                <p>₱4,999</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Classical Guitar', 4999)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Sleek and modern, this electric guitar provides smooth playability and contemporary features for aspiring rockstars or seasoned musicians.">
+                <div class="productclick"><div class="productbg"><img src="products/guitar5.png" alt="Product 3"></div>
+                <h3>TMB Matte E-Guitar</h3>
+                <p>₱7,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton"  onclick="addToCart('TMB Matte E-Guitar', 7000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Designed for professionals, this electric guitar offers premium craftsmanship and versatile sound options to enhance any performance.">
+                <div class="productclick"><div class="productbg"><img src="products/guitar6.png" alt="Product 3"></div>
+                <h3>TMB ElectraVibe</h3>
+                <p>₱23,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB ElectraVibe', 23000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Beginner-friendly and affordable, this electric guitar is a great choice for those starting their musical journey.">
+                <div class="productclick"><div class="productbg"><img src="products/guitar10.png" alt="Product 3"></div>
+                <h3>TMB Electric Guitar</h3>
+                <p>₱6,599</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Electric Guitar', 6599)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description=" Personalized for individual style, this electric guitar delivers exceptional tone and comfort for extended playing sessions.">
+                <div class="productclick"><div class="productbg"><img src="products/guitar11.png" alt="Product 3"></div>
+                <h3>TMB Signature E-Guitar</h3>
+                <p>₱35,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Signature E-Guitar', 35000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="With its classic design and versatile sound, this electric guitar is a reliable choice for musicians exploring different genres.">
+                <div class="productclick"><div class="productbg"><img src="products/guitar14.png" alt="Product 3"></div>
+                <h3>TMB Stratocasater</h3>
+                <p>₱9,999</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Stratocasater', 9999)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Offering a luxurious playing experience and expressive sound, this grand piano is perfect for both aspiring pianists and seasoned performers.">
+                <div class="productclick"><div class="productbg"><img src="products/piano3.png" alt="Product 3"></div>
+                <h3>TMB Grand Piano</h3>
+                <p>₱599,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton"  onclick="addToCart('TMB Grand Piano', 599000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="With its grandeur and advanced features, this piano stands as a favorite among professionals.">
+                <div class="productclick"><div class="productbg"><img src="products/piano1.png" alt="Product 3"></div>
+                <h3>TMB Majestic Keys</h3>
+                <p>₱320,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Majestic Keys', 320000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description=" Recreating the nostalgic tones of classic keyboards, this piano adds retro charm to any musical composition or performance.">
+                <div class="productclick"><div class="productbg"><img src="products/piano2.png" alt="Product 3"></div>
+                <h3>TMB VintageVibe Piano</h3>
+                <p>₱250,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton"  onclick="addToCart('TMB VintageVibe Piano', 250000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description=" With impeccable craftsmanship and unparalleled sound quality, this grand piano is the epitome of musical luxury.">
+                <div class="productclick"> <div class="productbg"><img src="products/piano4.png" alt="Product 3"></div>
+                <h3>TMB Prestige Piano</h3>
+                <p>₱799,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Prestige Piano', 799000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Small yet powerful, this organ delivers authentic sounds and is ideal for musicians on the move or with limited space.">
+                <div class="productclick"><div class="productbg"><img src="products/piano5.png" alt="Product 3"></div>
+                <h3>TMB Mini Organ</h3>
+                <p>₱4,999</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Mini Organ', 4999)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Combining vintage style with modern technology, this electric piano offers classic sounds and versatile features for any setting.
+
+            ">
+            <div class="productclick"><div class="productbg"><img src="products/piano7.png" alt="Product 3"></div>
+                <h3>TMB Electric Piano</h3>
+                <p>₱30,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Electric Piano', 30000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="This versatile keyboard offers a range of functions and sound effects, making it an ideal choice for musicians seeking inspiration and creativity in their compositions.">
+                <div class="productclick"><div class="productbg"><img src="products/piano8.png" alt="Product 3"></div>
+                <h3>TMB Serene Tunes</h3>
+                <p>₱95,000</p></div>   
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Serene Tunes', 95000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description=" Capture the grandeur of traditional organs with this instrument, delivering rich tones suitable for sacred music or classical performances.">
+                <div class="productclick">  <div class="productbg"><img src="products/piano9.png"></div>
+                <h3>TMB Classic Organ</h3>
+                <p>₱25,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Classic Organ', 25000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Time-tested and reliable, this drum set offers superior sound quality and durability for live gigs or studio recordings.">
+                <div class="productclick"> <div class="productbg"><img src="products/drums1.png"></div>
+                <h3>TMB Classic Drum Set</h3>
+                <p>₱130,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Classic Drum Set', 25000)">Add to Cart</button>
+                </div>
+            </div>
+           <div class="productbox" data-description="Featuring innovative technology, this drum set allows drummers to explore dynamic rhythms and create unique soundscapes.">
+                <div class="productclick">  <div class="productbg"><img src="products/drums2.png"></div>
+                <h3>TMB BeatBlast Set</h3>
+                <p>₱199,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB BeatBlast Set', 199000)">Add to Cart</button>
+                </div>
+            </div>
+           <div class="productbox" data-description="Versatile and affordable, this drum set is a great choice for beginners looking to start their drumming journey.">
+            <div class="productclick"> <div class="productbg"><img src="products/drums3.png"></div>
+                <h3>TMB Normal Drum Set</h3>
+                <p>₱120,000</p></div> 
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Normal Drum Set', 120000)">Add to Cart</button>
+                </div>
+            </div>
+           <div class="productbox" data-description="Designed for professional drummers, this high-performance drum set offers unmatched sound customization and precision.">
+                <div class="productclick"><div class="productbg"><img src="products/drums4.png"></div>
+                <h3>TMB Groove Master</h3>
+                <p>₱299,000</p> </div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Groove Master', 299000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="With its warm tones and responsive playability, this violin is perfect for beginners and enthusiasts of classical music.">
+                <div class="productclick"> <div class="productbg"><img src="products/violin 2.png"></div>
+                <h3>TMB Classic Violin</h3>
+                <p>₱10,000</p></div>  
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Classic Violin', 10000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description=" Offering a blend of traditional craftsmanship and contemporary design, this violin caters to the needs of modern musicians.">
+            <div class="productclick"><div class="productbg"><img src="products/violin 7.png"></div>
+                <h3>TMB Modern Violin</h3>
+                <p>₱21,000</p></div>  
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Modern Violin', 21000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Capture vintage vibes with this violin, featuring rich tones and a classic aesthetic reminiscent of bygone eras.">
+            <div class="productclick"><div class="productbg"><img src="products/violin 8.png"></div>
+                <h3>TMB Old Style Violin</h3>
+                <p>₱25,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Old Style Violin', 25000)">Add to Cart</button>
+                </div>
+            </div>
+           <div class="productbox" data-description=" Professional-grade and meticulously crafted, this violin delivers exceptional clarity and projection for the most demanding performances.">
+            <div class="productclick"><div class="productbg"><img src="products/violin 9.png"></div>
+                <h3>TMB Grayson Violin</h3>
+                <p>₱30,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Grayson Violin', 30000)">Add to Cart</button>
+                </div>
+            </div>
+          <div class="productbox" data-description="Easy to play and affordably priced, this ukulele is perfect for strumming along to your favorite tunes or jamming with friends.
+
+            ">
+            <div class="productclick"><div class="productbg"><img src="products/ukulele2.png"></div>
+                <h3>TMB Classic Ukulele</h3>
+                <p>₱3,499</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Classic Ukulele', 3499)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Transport yourself to the islands with this authentic ukulele, featuring a resonant sound and traditional Hawaiian design.">
+                <div class="productclick"> <div class="productbg"><img src="products/ukulele3.png"></div>
+                <h3>TMB Aloha Ukulele</h3>
+                <p>₱4,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Aloha Ukulele', 4000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Bright and cheerful, this ukulele adds a pop of color to your music while providing comfortable playability for hours of enjoyment.">
+                <div class="productclick">   <div class="productbg"><img src="products/ukulele4.png"></div>
+                <h3>TMB Green Ukulele</h3>
+                <p>₱2,000</p></div>
+                <div class="buttons">
+                    <button class="cartbutton" onclick="addToCart('TMB Green Ukulele', 2000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productbox" data-description="Crafted from quality wood, this ukulele offers warm tones and natural elegance, making it a standout instrument for any performance.">
+                <div class="productclick">   <div class="productbg"><img src="products/ukulele6.png"></div>
+                <h3>TMB Woody Ukulele</h3>
+                <p>₱5,599</p></div>
+                <div class="buttons">
+                    <button class="cartbutton"  onclick="addToCart('TMB Woody Ukulele', 5599)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="viewproduct" class="view">
+        <div class="productdescription">
+            <span id="closeViewProduct" class="close">&times;</span>
+            <div class="productview">
+                <img id="productimage" src="">
+                <div class="productdetails">
+                    <h3 id="productname"></h3>
+                    <h2 id="aboutproduct"></h2>
+                    <p id="productprice"></p>
+                    <div class="buttons">
+                        <button class="cartbutton" id="detailAddToCart">Add to Cart</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+
+var view = document.getElementById("viewproduct");
+        var span = document.querySelector(".close");
+        var detailAddToCartButton = document.getElementById("detailAddToCart");
+
+        function displayProductDetails(product) {
+    var productImage = document.getElementById("productimage");
+    var productName = document.getElementById("productname");
+    var aboutProduct = document.getElementById("aboutproduct");
+    var productPrice = document.getElementById("productprice");
+    var detailAddToCartButton = document.getElementById("detailAddToCart");
+
+    var name = product.querySelector("h3").innerText;
+    var description = product.parentNode.getAttribute("data-description");
+    var price = parseFloat(product.querySelector("p").innerText.replace('₱', '').replace(',', '')); // Remove '₱' and convert to number
+
+    productImage.src = product.querySelector("img").src;
+    productName.innerText = name;
+    aboutProduct.innerText = description;
+    productPrice.innerText = '₱' + price.toFixed(2); // Format price with two decimal places
+
+
+    detailAddToCartButton.setAttribute("onclick", `addToCart('${name}', ${price})`);
+
+    
+    view.style.display = "block";
+}
+
+
+
+
+
+        span.onclick = function() {
+            view.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == view) {
+                view.style.display = "none";
+            }
+        };
+
+        var products = document.getElementsByClassName("productclick");
+        for (var i = 0; i < products.length; i++) {
+            products[i].onclick = function() {
+                displayProductDetails(this);
+            };
+        }
+
+        let cart = [];
+        
+        function addToCart(productName, price, img) {
+    console.log("Adding to cart:", productName, price); // Debugging line
+
+    let found = false;
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === productName) {
+            cart[i].quantity++;
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        cart.push({ name: productName, price: price, quantity: 1 });
+    }
+    updateCart();
+}
+
+
+
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cart-items');
+            cartItemsElement.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <span>${item.name}</span>
+                    <span>₱${item.price} x ${item.quantity}</span>
+                    <button onclick="increaseQuantity('${item.name}')">+</button>
+                    <button onclick="decreaseQuantity('${item.name}')">-</button>
+                `;
+                cartItemsElement.appendChild(itemElement);
+                total += item.price * item.quantity;
+            });
+            cartItemsElement.innerHTML += `<h3 style="color:black;">Total: ₱${total}</h3>`;
+        }
+
+        function increaseQuantity(productName) {
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].name === productName) {
+                    cart[i].quantity++;
+                    break;
+                }
+            }
+            updateCart();
+        }
+
+        function decreaseQuantity(productName) {
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].name === productName) {
+                    cart[i].quantity--;
+                    if (cart[i].quantity === 0) {
+                        cart.splice(i, 1);
+                    }
+                    break;
+                }
+            }
+            updateCart();
+        }
+        function toggleCart() {
+    console.log("Cart clicked"); 
+    const cartElement = document.getElementById('cart');
+    cartElement.classList.toggle('hidden');
+}
+
+document.getElementById('hideCartBtn').addEventListener('click', function() {
+    document.getElementById('cart').classList.add('hidden');
+});
+
+document.getElementById('hidecheckouttBtn').addEventListener('click', function() {
+    document.querySelector('.checkout-box').classList.add('hidden');
+});
+document.querySelector('.checkout').addEventListener('click', function() {
+
+    document.querySelector('.checkout-box').classList.toggle('hidden');
+});
+let selectedPaymentMethod = ""; // Declare the variable outside of the event listener function
+
+// Function to set the payment method
+function setPaymentMethod(method) {
+    selectedPaymentMethod = method;
+}
+
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const userName = document.getElementById('name').value;
+    const userAddress = document.getElementById('address').value;
+    const userContact = document.getElementById('contact').value;
+
+    let orderDetails = '';
+    let total = 0;
+    cart.forEach(item => {
+        orderDetails += `${item.name} (₱${item.price} x ${item.quantity})\n`;
+        total += item.price * item.quantity;
+    });
+
+    // Include the selected payment method in the order summary
+    const paymentMethod = selectedPaymentMethod !== "" ? `Payment Method: ${selectedPaymentMethod}\n` : '';
+
+    alert(`Thank you for ordering, ${userName}!\n\nYour order details will be sent to:\nName: ${userName}\nAddress: ${userAddress}\nContact Number: ${userContact}\n${paymentMethod}\nOrder Summary:\n${orderDetails}\nTotal: ₱${total.toFixed(2)}\n`);
+
+    document.getElementById('orderForm').reset();
+    cart = [];
+    updateCart();
+});
+
+    </script>
+</body>
+</html>
